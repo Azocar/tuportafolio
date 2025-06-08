@@ -22,7 +22,7 @@
 - **Vista:** Archivos HTML/PHP que muestran la interfaz al usuario.
 - **Controlador:** Recibe las peticiones del usuario, procesa la lógica y comunica modelo-vista.
 
-## Script SQL
+## Base de datos SQL
 
 El script para crear la base de datos y tablas se encuentra en `/database/crear_bd.sql`.
 
