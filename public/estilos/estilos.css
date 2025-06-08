@@ -1,0 +1,310 @@
+/*
+Estilos ultra-futuristas y accesibles para TuPortafolio
+Autor: Gabriel Azócar 2025
+*/
+:root {
+    --color-primario: #00fff7;
+    --color-secundario: #23243a;
+    --color-fondo: #18192b;
+    --color-fondo-claro: #f8fafd;
+    --color-texto: #e0e0e0;
+    --color-acento: #ff2e63;
+    --color-boton: #0e6efd;
+    --color-boton-hover: #00fff7;
+    --color-boton-texto: #18192b;
+    --borde-card: 2.5px solid var(--color-primario);
+    --sombra-card: 0 6px 32px 0 rgba(0,255,255,0.18);
+    --fuente-titulo: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+    --fuente-texto: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+[data-tema="claro"] {
+    --color-fondo: #f8fafd;
+    --color-texto: #18192b;
+    --color-secundario: #e0e0e0;
+    --color-primario: #0e6efd;
+    --color-acento: #ff2e63;
+    --color-boton: #0e6efd;
+    --color-boton-hover: #23243a;
+    --color-boton-texto: #fff;
+    --borde-card: 2.5px solid var(--color-primario);
+    --sombra-card: 0 6px 32px 0 rgba(14,110,253,0.13);
+}
+[data-tema="oscuro"] {
+    --color-fondo: #18192b;
+    --color-texto: #e0e0e0;
+    --color-secundario: #23243a;
+    --color-primario: #00fff7;
+    --color-acento: #ff2e63;
+    --color-boton: #00fff7;
+    --color-boton-hover: #ff2e63;
+    --color-boton-texto: #18192b;
+    --borde-card: 2.5px solid var(--color-primario);
+    --sombra-card: 0 6px 32px 0 rgba(0,255,255,0.18);
+}
+body {
+    background: linear-gradient(120deg, var(--color-fondo) 60%, var(--color-secundario) 100%);
+    color: var(--color-texto);
+    font-family: var(--fuente-texto);
+    margin: 0;
+    min-height: 100vh;
+    transition: background 0.5s, color 0.5s;
+}
+header {
+    background: rgba(10,10,30,0.98);
+    padding: 2rem 2.5rem 1.2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 3px solid var(--color-primario);
+    box-shadow: 0 2px 24px 0 rgba(0,255,255,0.13);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+header h1 {
+    font-family: var(--fuente-titulo);
+    font-size: 2.8rem;
+    letter-spacing: 0.18em;
+    color: var(--color-primario);
+    margin: 0 0 0.7rem 0;
+    text-shadow: 0 2px 24px var(--color-primario);
+    text-transform: uppercase;
+}
+nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+nav a, nav button {
+    font-family: var(--fuente-titulo);
+    font-size: 1.08rem;
+    color: var(--color-boton-texto);
+    background: var(--color-boton);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px 0 rgba(0,255,255,0.10);
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    margin-bottom: 0.2rem;
+    outline: none;
+}
+nav a:hover, nav button:hover {
+    background: var(--color-boton-hover);
+    color: var(--color-boton-texto);
+    transform: scale(1.08) translateY(-2px);
+    box-shadow: 0 4px 18px 0 var(--color-acento);
+}
+nav span {
+    font-family: var(--fuente-titulo);
+    color: var(--color-acento);
+    font-size: 1.1rem;
+    margin-right: 0.5rem;
+}
+main {
+    max-width: 1000px;
+    margin: 2.5rem auto;
+    padding: 2.5rem;
+    background: rgba(30,32,60,0.96);
+    border-radius: 22px;
+    box-shadow: 0 10px 40px 0 rgba(0,255,255,0.13);
+}
+[data-tema="claro"] main {
+    background: #fff;
+    box-shadow: 0 10px 40px 0 rgba(14,110,253,0.10);
+}
+h2 {
+    font-family: var(--fuente-titulo);
+    color: var(--color-acento);
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    letter-spacing: 0.09em;
+    text-align: center;
+    text-shadow: 0 2px 12px var(--color-acento);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    margin-bottom: 2rem;
+}
+form label {
+    font-size: 1.13rem;
+    font-family: var(--fuente-texto);
+    color: var(--color-primario);
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+form input, form textarea {
+    font-family: var(--fuente-texto);
+    font-size: 1.05rem;
+    border: 2px solid var(--color-primario);
+    border-radius: 10px;
+    padding: 0.7rem;
+    background: #18192b;
+    color: var(--color-texto);
+    outline: none;
+    transition: border 0.2s, background 0.2s, color 0.2s;
+}
+[data-tema="claro"] form input, [data-tema="claro"] form textarea {
+    background: #f8fafd;
+    color: #18192b;
+}
+form input:focus, form textarea:focus {
+    border: 2.5px solid var(--color-acento);
+}
+form button {
+    font-family: var(--fuente-titulo);
+    font-size: 1.13rem;
+    background: var(--color-boton);
+    color: var(--color-boton-texto);
+    border: none;
+    border-radius: 10px;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    box-shadow: 0 2px 12px 0 rgba(0,255,255,0.10);
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    margin-top: 0.5rem;
+}
+form button:hover {
+    background: var(--color-boton-hover);
+    color: var(--color-boton-texto);
+    transform: scale(1.05);
+}
+.compacto form {
+    gap: 0.4rem;
+    margin-bottom: 0.7rem;
+}
+.compacto form label {
+    gap: 0.15rem;
+    font-size: 1.01rem;
+}
+.compacto form input, .compacto form textarea {
+    padding: 0.45rem 0.7rem;
+    font-size: 0.98rem;
+}
+.compacto form button {
+    margin-top: 0.1rem;
+    padding: 0.5rem 1.1rem;
+    font-size: 0.98rem;
+}
+.campos-compactos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+.campos-compactos label {
+    gap: 0.08rem;
+    font-size: 0.97rem;
+    margin-bottom: 0.1rem;
+}
+.campos-compactos input, .campos-compactos textarea {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.95rem;
+}
+.portafolios-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+}
+.compacto.portafolios-lista {
+    gap: 1.2rem;
+    margin-top: 1.2rem;
+}
+.portafolio-card {
+    background: rgba(20,22,40,0.99);
+    border-radius: 18px;
+    border: var(--borde-card);
+    box-shadow: var(--sombra-card);
+    padding: 2rem 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s, color 0.2s;
+    font-family: var(--fuente-texto);
+    color: var(--color-texto);
+    position: relative;
+    overflow: hidden;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    border-image: linear-gradient(120deg, var(--color-primario), var(--color-acento)) 1;
+}
+.compacto.portafolio-card {
+    padding: 1.1rem 0.8rem;
+    min-height: unset;
+    gap: 0.25rem;
+}
+[data-tema="claro"] .portafolio-card {
+    background: #fff;
+    color: #18192b;
+    border: 2.5px solid var(--color-primario);
+    box-shadow: 0 6px 32px 0 rgba(14,110,253,0.13);
+}
+.portafolio-card:hover {
+    transform: translateY(-10px) scale(1.04);
+    box-shadow: 0 16px 40px 0 var(--color-primario), 0 2px 16px 0 var(--color-acento);
+    border-color: var(--color-acento);
+}
+.portafolio-card h3 {
+    font-family: var(--fuente-titulo);
+    color: var(--color-primario);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 8px var(--color-primario);
+}
+.compacto.portafolio-card h3 {
+    margin-bottom: 0.2rem;
+    font-size: 1.15rem;
+}
+.portafolio-card p {
+    margin: 0.3rem 0;
+    font-size: 1.08rem;
+    line-height: 1.6;
+    word-break: break-word;
+}
+.compacto.portafolio-card p {
+    margin: 0.12rem 0;
+    font-size: 0.98rem;
+    line-height: 1.25;
+}
+.portafolio-card strong {
+    color: var(--color-acento);
+    font-weight: 600;
+}
+footer {
+    text-align: center;
+    padding: 1.5rem 0 0.7rem 0;
+    color: var(--color-primario);
+    font-family: var(--fuente-titulo);
+    font-size: 1.13rem;
+    letter-spacing: 0.09em;
+    background: none;
+}
+.titulo-portafolios, .titulo-login, .titulo-registro {
+    color: var(--color-primario);
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    letter-spacing: 0.09em;
+    text-align: center;
+    text-shadow: 0 2px 12px var(--color-acento);
+    font-family: var(--fuente-titulo);
+}
+@media (max-width: 700px) {
+    main {
+        padding: 1rem;
+    }
+    .portafolios-lista {
+        grid-template-columns: 1fr;
+    }
+    header {
+        padding: 1rem 0.5rem 0.5rem 0.5rem;
+    }
+    .compacto.portafolio-card {
+        padding: 0.7rem 0.4rem;
+    }
+}
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Orbitron:wght@700&display=swap');

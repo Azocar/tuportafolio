@@ -1,0 +1,5 @@
+# Redirige todas las peticiones a index.php para rutas amigables
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
