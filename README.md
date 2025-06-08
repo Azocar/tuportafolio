@@ -1,6 +1,6 @@
 # TuPortafolio
 
-Sinopsis: la aplicación web “TuPortafolio” V0.1 permite crear portafolios profesionales de manera fácil y dinámica, puedes ver los portafolios de otros profesionales registrados y si necesitas algunas de sus habilidades contactarlos a su correo.
+Sinopsis: la aplicación web “TuPortafolio” Version 0.1 permite crear portafolios profesionales de manera fácil y dinámica, puedes ver los portafolios de otros profesionales registrados y si necesitas algunas de sus habilidades contactarlos a su correo.
 
 ## Instrucciones para configurar el entorno local
 
