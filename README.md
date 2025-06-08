@@ -6,7 +6,7 @@ Sinopsis: la aplicación web “TuPortafolio” V0.1 permite crear portafolios p
 
 1. Instala XAMPP y asegúrate de que Apache y MySQL estén activos.
 2. Copia la carpeta del proyecto en `c:/xampp/htdocs/`.
-3. Importa la base de datos usando el script `database/crear_bd.sql` desde phpMyAdmin.
+3. Importa la base de datos usando  `database/crear_bd.sql` desde phpMyAdmin.
 4. Accede a la aplicación desde `http://localhost/TuPortafolio/public/`.
 
 ## Estructura del Proyecto (MVC)
@@ -16,7 +16,7 @@ Sinopsis: la aplicación web “TuPortafolio” V0.1 permite crear portafolios p
 - `/app/views/` — Vistas HTML/PHP
 - `/app/controllers/` — Controladores PHP
 - `/config/` — Configuración y rutas
-- `/database/` — Script SQL para la base de datos
+- `/database/` — SQL para la base de datos
 
 ## Explicación de la estructura MVC
 
@@ -26,7 +26,7 @@ Sinopsis: la aplicación web “TuPortafolio” V0.1 permite crear portafolios p
 
 ## Base de datos SQL
 
-El script para crear la base de datos y tablas se encuentra en `/database/crear_bd.sql`.
+para crear la base de datos y tablas se encuentra en `/database/crear_bd.sql`.
 
 ## Créditos
 
