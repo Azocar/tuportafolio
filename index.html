@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a TuPortafolio</title>
+    <link rel="stylesheet" href="public/estilos/estilos.css">
+    <script src="public/estilos/tema.js" defer></script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle fill='%230ff1ce' cx='32' cy='32' r='32'/%3E%3Ctext x='50%' y='54%' text-anchor='middle' font-size='38' font-family='Orbitron,Arial,sans-serif' fill='%2323243a' font-weight='bold'%3EP%3C/text%3E%3C/svg%3E">
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(120deg, var(--color-fondo) 60%, var(--color-secundario) 100%);
+        }
+        .landing-container {
+            max-width: 950px;
+            margin: 3rem auto 2rem auto;
+            padding: 2.7rem 2.2rem 2.2rem 2.2rem;
+            background: rgba(30,32,60,0.98);
+            border-radius: 28px;
+            box-shadow: 0 10px 40px 0 rgba(0,255,255,0.13);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .landing-container.compacto {
+            margin: 2rem auto;
+            padding: 1.5rem 1rem;
+        }
+        .landing-titulo {
+            font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+            color: var(--color-primario);
+            font-size: 3.1rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 1.1rem;
+            text-shadow: 0 2px 32px var(--color-primario);
+            animation: glow 2.5s infinite alternate;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 2px 32px var(--color-primario), 0 0 0 var(--color-acento); }
+            to { text-shadow: 0 2px 32px var(--color-acento), 0 0 24px var(--color-primario); }
+        }
+        .landing-sub {
+            color: var(--color-acento);
+            font-size: 1.35rem;
+            margin-bottom: 2.2rem;
+            font-family: 'Montserrat', Arial, sans-serif;
+            animation: fadeIn 1.5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .landing-lista {
+            text-align: left;
+            margin: 2rem auto 2.5rem auto;
+            max-width: 700px;
+            font-size: 1.18rem;
+            color: var(--color-texto);
+            font-family: 'Montserrat', Arial, sans-serif;
+            line-height: 1.8;
+            background: rgba(20,22,40,0.93);
+            border-radius: 16px;
+            box-shadow: 0 2px 12px 0 var(--color-primario);
+            padding: 1.5rem 2rem;
+            animation: fadeIn 2.2s;
+        }
+        .landing-lista.compacto {
+            margin: 1rem auto;
+            padding: 1rem;
+            font-size: 1.1rem;
+        }
+        .landing-lista li {
+            margin-bottom: 1.1rem;
+            padding-left: 0.2rem;
+            position: relative;
+            list-style: none;
+        }
+        .landing-lista li:before {
+            content: '★';
+            color: var(--color-primario);
+            margin-right: 0.7em;
+            font-size: 1.1em;
+            vertical-align: middle;
+            animation: starPulse 2s infinite alternate;
+        }
+        @keyframes starPulse {
+            from { color: var(--color-primario); }
+            to { color: var(--color-acento); }
+        }
+        .landing-btn {
+            display: inline-block;
+            margin: 2.5rem auto 1.5rem auto;
+            padding: 1.1rem 2.7rem;
+            font-size: 1.35rem;
+            font-family: 'Orbitron', Arial, sans-serif;
+            color: var(--color-boton-texto);
+            background: linear-gradient(90deg, var(--color-boton), var(--color-acento));
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 4px 18px 0 var(--color-acento);
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 0.08em;
+            animation: pulseBtn 2.5s infinite alternate;
+        }
+        @keyframes pulseBtn {
+            from { box-shadow: 0 4px 18px 0 var(--color-acento); }
+            to { box-shadow: 0 8px 32px 0 var(--color-primario); }
+        }
+        .landing-btn:hover {
+            background: linear-gradient(90deg, var(--color-acento), var(--color-boton));
+            color: var(--color-boton-texto);
+            transform: scale(1.09);
+        }
+        .landing-anim {
+            position: absolute;
+            top: -60px; left: -60px;
+            width: 180px; height: 180px;
+            background: radial-gradient(circle, var(--color-primario) 0%, transparent 70%);
+            opacity: 0.18;
+            z-index: 0;
+            animation: floatAnim 6s infinite alternate;
+        }
+        .landing-anim2 {
+            position: absolute;
+            bottom: -60px; right: -60px;
+            width: 180px; height: 180px;
+            background: radial-gradient(circle, var(--color-acento) 0%, transparent 70%);
+            opacity: 0.13;
+            z-index: 0;
+            animation: floatAnim2 7s infinite alternate;
+        }
+        @keyframes floatAnim {
+            from { transform: translateY(0) scale(1); }
+            to { transform: translateY(30px) scale(1.15); }
+        }
+        @keyframes floatAnim2 {
+            from { transform: translateY(0) scale(1); }
+            to { transform: translateY(-30px) scale(1.12); }
+        }
+        @media (max-width: 700px) {
+            .landing-container { padding: 1.2rem 0.5rem; }
+            .landing-titulo { font-size: 2.1rem; }
+            .landing-lista { padding: 1rem 0.7rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="landing-container compacto">
+        <div class="landing-anim"></div>
+        <div class="landing-anim2"></div>
+        <h1 class="landing-titulo">TuPortafolio</h1>
+        <div class="landing-sub">¡Crea, comparte y descubre portafolios profesionales de manera fácil y dinámica!</div>
+        <ul class="landing-lista compacto">
+            <li><b>Registro e inicio de sesión:</b> Seguridad y acceso personalizado para cada usuario.</li>
+            <li><b>Creación de portafolio:</b> Completa tu perfil profesional con habilidades, sobre ti, experiencia, proyectos y educación.</li>
+            <li><b>Edición y eliminación dinámica:</b> Modifica o elimina tu portafolio en cualquier momento, de forma sencilla y rápida.</li>
+            <li><b>Explora portafolios:</b> Visualiza los portafolios de todos los usuarios registrados en la página principal.</li>
+            <li><b>Temas claro y oscuro:</b> Cambia el aspecto de la web en tiempo real con un solo clic.</li>
+            <li><b>Diseño moderno:</b> Interfaz responsiva y compacta.</li>
+            <li><b>USO:</b> Actualmente debes descargar XAMPP e instalar la base de datos para poder usarla.</li>
+        </ul>
+        <a class="landing-btn" href="public/inicio">¡Explorar Portafolios!</a>
+        <div style="margin-top:1.2rem; color:var(--color-primario); font-family:'Orbitron',Arial,sans-serif; font-size:1.05rem; letter-spacing:0.08em;">
+            &copy; Gabriel Azócar 2025
+        </div>
+    </div>
+</body>
+</html>

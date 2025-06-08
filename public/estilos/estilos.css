@@ -292,6 +292,33 @@ footer {
     text-shadow: 0 2px 12px var(--color-acento);
     font-family: var(--fuente-titulo);
 }
+.landing-container.compacto {
+    padding: 1.2rem 0.7rem 1.1rem 0.7rem;
+    max-width: 700px;
+}
+.landing-titulo {
+    font-size: 2.1rem;
+    margin-bottom: 0.7rem;
+}
+.landing-sub {
+    font-size: 1.08rem;
+    margin-bottom: 1.1rem;
+}
+.landing-lista.compacto {
+    padding: 0.7rem 0.5rem;
+    font-size: 1.01rem;
+    margin: 1.1rem auto 1.3rem auto;
+    max-width: 480px;
+}
+.landing-lista.compacto li {
+    margin-bottom: 0.5rem;
+}
+.landing-btn {
+    margin: 1.2rem auto 0.7rem auto;
+    padding: 0.7rem 1.5rem;
+    font-size: 1.08rem;
+    border-radius: 10px;
+}
 @media (max-width: 700px) {
     main {
         padding: 1rem;
@@ -305,6 +332,9 @@ footer {
     .compacto.portafolio-card {
         padding: 0.7rem 0.4rem;
     }
+    .landing-container.compacto { padding: 0.7rem 0.2rem 0.7rem 0.2rem; }
+    .landing-titulo { font-size: 1.3rem; }
+    .landing-lista.compacto { padding: 0.3rem 0.1rem; font-size: 0.97rem; }
 }
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Orbitron:wght@700&display=swap');

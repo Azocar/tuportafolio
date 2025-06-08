@@ -9,14 +9,7 @@ class UsuarioControlador {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $modelo = new UsuarioModelo();
             $exito = $modelo->registrar($_POST['nombre_usuario'], $_POST['email'], $_POST['contrasena']);
-            if ($exito === true) {
-                header('Location: /TuPortafolio/public/login');
-                exit;
-            } elseif ($exito === 'duplicado') {
-                $mensaje = 'El nombre de usuario o correo ya está registrado. Intenta con otros datos.';
-            } else {
-                $mensaje = 'Error al registrar.';
-            }
+            $mensaje = $exito ? 'Registro exitoso. Inicia sesión.' : 'Error al registrar.';
         }
         include __DIR__ . '/../views/usuario/registro.php';
     }
