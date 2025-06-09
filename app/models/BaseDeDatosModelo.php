@@ -1,6 +1,6 @@
 <?php
 // Modelo para la conexión a la base de datos MySQL usando mysqli
-// Comenta todo en español
+// Aqui coloque para hacer la conexion con sevidores y localhost
 class BaseDeDatosModelo {
     // Datos de conexión para XAMPP
     private $host = 'localhost';
