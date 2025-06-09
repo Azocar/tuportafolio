@@ -28,6 +28,11 @@ Sinopsis: la aplicación web “TuPortafolio” Version 0.1 permite crear portaf
 
 para crear la base de datos y tablas se encuentra en `/database/crear_bd.sql`.
 
+## LINKs de la web 
+
+https://tuportafolio.wuaze.com/
+https://tuportafolio.wuaze.com/TuPortafolio/public/inicio
+
 ## Créditos
 
 Copyright Gabriel Azócar 2025
